@@ -29,15 +29,13 @@ public class PatientManager {
 
     public String toString(){
         String output = "";
-        if(patients.get(0)!=null){
+        if(patients.size()==0){
             for(int i=0;i<patients.size();i++){
                 Patient p = patients.get(i);
-                if(p!=null){
-                    output += p.id + " " + p.caffeine + "\n";
-                }
+                output += p.id + " " + p.caffeine + "\n";
             }
         } else {
-            output += "Empty";
+            output += "Empty\n";
         }
         return output;
     }
