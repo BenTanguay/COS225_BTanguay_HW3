@@ -23,13 +23,14 @@ public class PatientManager {
             patients.get(i).caffeine -= 160;
             if(patients.get(i).caffeine <= 0){
                 patients.remove(i);
+                i -= 1;
             }
         }
     }
 
     public String toString(){
         String output = "";
-        if(patients.size()==0){
+        if(patients.size()!=0){
             for(int i=0;i<patients.size();i++){
                 Patient p = patients.get(i);
                 output += p.id + " " + p.caffeine + "\n";
